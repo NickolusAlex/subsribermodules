@@ -3,18 +3,33 @@
 <head>
 	<title></title>
 <script type="text/javascript">
-	var na=[""],no=[""];
+	let i;var na=[""],no=[""];
 	function myfunc() {
 	var text,text1;	
 	var	he=document.getElementById('name').value;
 	var	ha=document.getElementById('number').value;
 	na.push(he);
 	no.push(ha);
+	
+document.querySelector('#g').innerHTML=i;
+	var t=na.length;
+	 var button="<button id='del' type='button' onclick='del()'>UnSubscribe</button>";
+	 if (i===undefined)
+	 {  i=1;
+	 	var text=na[1];
+	 	var text1=no[1];
+	 	document.querySelector('#hel').innerHTML="<table><th><tr><td>username</td><td>number</td><td>unsubsribe</td></tr><tr><td>"+text+"</td><td>"+text1+"</td><td>"+button+"</td></tr>";
+	 }
+	 else{
+	 	i++;
+	 	var text=na[i];
+	 	var text1=no[i];
+	 	document.querySelector('#hel').innerHTML="<tr><td>"+text+"</td><td>"+text1+"</td><td>"+button+"</td></tr>";	
+	 }
 
-	text=na.length;
 
-	document.querySelector('#hel').innerHTML=na[text-1]"<br>" ;
-	document.querySelector('#hes').innerHTML=no[text-1] ;
+
+
 	}
 
 
@@ -26,7 +41,9 @@
 <input type="text"  id="name" value=""><br>
 <input type="text"  id="number" value=""><br>
 <button id="sub" type="button" onclick="myfunc()">Subscribe</button>
-<p id="hel"></p>
-<p id="hes"></p>
+
+<div id="hel"></div>
+<div id="gee"></div>
+<p id="g"></p>
 </body>
 </html>
