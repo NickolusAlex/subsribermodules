@@ -1,49 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title></title>
-<script type="text/javascript">
-	let i;var na=[""],no=[""];
-	function myfunc() {
-	var text,text1;	
-	var	he=document.getElementById('name').value;
-	var	ha=document.getElementById('number').value;
-	na.push(he);
-	no.push(ha);
-	
-document.querySelector('#g').innerHTML=i;
-	var t=na.length;
-	 var button="<button id='del' type='button' onclick='del()'>UnSubscribe</button>";
-	 if (i===undefined)
-	 {  i=1;
-	 	var text=na[i];
-	 	var text1=no[i];
-	 	document.querySelector('#hel').innerHTML="<table><th><tr><td>username</td><td>number</td><td>unsubsribe</td></tr><tr><td>"+text+"</td><td>"+text1+"</td><td>"+button+"</td></tr>";
-	 }
-	 else{
-	 	i++;
-	 	var text=na[i];
-	 	var text1=no[i];
-	 	document.querySelector('#hel').innerHTML="<tr><td>"+text+"</td><td>"+text1+"</td><td>"+button+"</td></tr>";	
-	 }
-
-
-
-
-	}
-
-
-</script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <!-- JQuery CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
 </head>
 <body>
-<div><p>Enter the name and number</p></div>
-<input type="text"  id="name" value=""><br>
-<input type="text"  id="number" value=""><br>
-<button id="sub" type="button" onclick="myfunc()">Subscribe</button>
-
-<div id="hel"></div>
-<div id="gee"></div>
-<p id="g"></p>
+    <div class="first_div">
+        <h3>Enter the Name and Number</h3>
+        <input type="text" name="" id="name" placeholder="Name">
+        <input type="text" name="" id="number" placeholder="Number">
+        <button id="subscribe">Subscribe</button>
+    </div>
+    <table id="subscriber_list">
+        <tr>
+            <th>Name</th>
+            <th>Number</th>
+        </tr>
+    </table>
 </body>
 </html>
